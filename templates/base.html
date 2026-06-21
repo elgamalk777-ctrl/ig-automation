@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}IG Automation{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">📸 IG Automate</div>
+      <nav>
+        <a href="/dashboard/settings" class="{{ 'active' if active_tab == 'settings' }}">⚙ Settings</a>
+        <a href="/dashboard/campaigns" class="{{ 'active' if active_tab == 'campaigns' }}">🎯 Campaigns</a>
+      </nav>
+    </aside>
+    <main class="content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
