@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Settings — IG Automate{% endblock %}
+{% block content %}
+  <h1>Instagram Settings</h1>
+  <p class="subtitle">Connect your Instagram Business account credentials. These are stored locally and never exposed to the frontend.</p>
+
+  <form id="settings-form" class="card">
+    <label>Access Token
+      <input type="password" id="access_token" placeholder="EAAG..." required />
+    </label>
+    <label>Facebook Page ID
+      <input type="text" id="page_id" placeholder="1234567890" />
+    </label>
+    <label>Instagram Business Account ID
+      <input type="text" id="ig_business_account_id" placeholder="1789..." required />
+    </label>
+    <button type="submit">Save Settings</button>
+    <span id="settings-status" class="status-msg"></span>
+  </form>
+{% endblock %}
